@@ -1,0 +1,89 @@
+#dialogVisible {
+  .ivu-modal {
+    width: 50% !important;
+  }
+}
+.version {
+  .ivu-modal-footer {
+    padding: 0;
+  }
+}
+.ivu-cascader-menu {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+#equipment {
+  .ivu-modal-body {
+    height: 700px;
+    overflow: auto;
+    border: 1px solid #484d58;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+.chargeMessage {
+  .ivu-modal-content {
+    box-shadow: none !important;
+  }
+}
+#chargeNurseModal {
+  .ivu-modal-content {
+    box-shadow: none !important;
+  }
+}
+.ivu-poptip-body-content {
+  overflow: visible;
+}
+.ivu-notice {
+  bottom: 20px;
+  top: auto !important;
+}
+.ivu-progress-inner,
+.ivu-progress-success-bg,
+.ivu-progress-bg {
+  border-radius: 0;
+}
+
+.header-search-song {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #327cff;
+  padding: 2px 10px;
+  color: #fff;
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #327cff;
+  }
+}
+.global-alarm-modal {
+  display: none;
+}
+.Prjtitle {
+  font-size: 16px;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.demo-spin-icon-load {
+  animation: ani-demo-spin 1s linear infinite;
+}
+@keyframes ani-demo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.none-handler-wrap .ivu-input-number-handler-wrap {
+  display: none !important;
+}

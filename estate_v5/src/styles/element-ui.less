@@ -1,0 +1,222 @@
+.el-table {
+  @bg-color: #1a202e;
+  @bg-color-th: #28313f;
+  @bg-color-hover: #1f2734;
+  @border-color: #3d3d41;
+
+  font-size: 14px;
+  color: #fff;
+  background-color: @bg-color;
+  thead.is-group th.el-table__cell {
+    background: #28313f !important;
+  }
+  .el-table__body tr.hover-row.current-row > td.el-table__cell,
+  .el-table__body tr.hover-row.el-table__row--striped.current-row > td.el-table__cell,
+  .el-table__body tr.hover-row.el-table__row--striped > td.el-table__cell,
+  .el-table__body tr.hover-row > td.el-table__cell {
+    background-color: #28313f !important;
+  }
+  &.el-table--border {
+    border-color: @border-color;
+  }
+  &.el-table--border::after {
+    background-color: @border-color;
+  }
+  th.el-table__cell {
+    background-color: @bg-color-th;
+    color: #fefefe;
+    &.is-leaf {
+      border-color: @border-color;
+    }
+  }
+  td.el-table__cell {
+    background-color: @bg-color;
+    border-color: @border-color;
+  }
+  .el-table__body tr:hover td.el-table__cell {
+    background-color: @bg-color-hover;
+  }
+  &::before {
+    background-color: @border-color;
+  }
+}
+
+.el-input__inner,
+.el-range-input {
+  background-color: #1a202e;
+  border: 1px solid #3d3d41;
+  color: #98989e;
+  &:hover {
+    border-color: #57a3f3;
+  }
+}
+.el-picker-panel,
+.el-time-panel {
+  background: #1a202e;
+  border: none;
+  color: #fff;
+}
+.el-date-range-picker__time-header {
+  border: none;
+  .el-input.is-disabled .el-input__inner {
+    background-color: #1a202e;
+    border-color: #3d3d41;
+    color: #98989e;
+  }
+}
+.el-scrollbar__wrap {
+  box-sizing: content-box;
+}
+.el-popper[x-placement^='bottom'] .popper__arrow {
+  border-bottom-color: #1a202e;
+  &::after {
+    border-bottom-color: #1a202e;
+  }
+}
+.el-picker-panel__icon-btn {
+  color: #5a5a5e;
+}
+.el-picker-panel__footer {
+  background: #1a202e;
+  border: none;
+  .el-button--default {
+    color: #fff;
+    background-color: #2d8cf0;
+    border-color: #2d8cf0;
+    &:hover {
+      background-color: #57a3f3;
+      border-color: #57a3f3;
+    }
+  }
+  .el-button.is-disabled.is-plain {
+    color: #fff;
+    background-color: #2d8cf0;
+    border-color: #2d8cf0;
+  }
+}
+.el-date-table th {
+  border: none;
+}
+
+.el-date-table td {
+  &.prev-month,
+  &.next-month {
+    color: #5a5a5e;
+  }
+  &.available:hover div {
+    background: #2c2c2e;
+    color: #fff;
+  }
+  &.in-range div {
+    background: #2c2c2e;
+    &:hover {
+      background: #2c2c2e;
+    }
+  }
+}
+.el-month-table td {
+  &:hover div {
+    background: #2c2c2e;
+    color: #fff;
+  }
+  &.in-range div {
+    background: #2c2c2e;
+    &:hover {
+      background: #2c2c2e;
+    }
+  }
+  .cell {
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+.el-date-range-picker__content.is-left {
+  border: none;
+}
+.el-time-panel__content::after,
+.el-time-panel__content::before {
+  border-color: #4c4c4e;
+}
+.el-time-spinner__item {
+  color: #fff;
+  &.active:not(.disabled) {
+    color: #2d8cf0;
+    // background: #2c2c2e;
+  }
+  &:hover:not(.disabled):not(.active) {
+    background: #2c2c2e;
+  }
+}
+.el-time-panel__footer {
+  border-color: #3d3d41;
+}
+.el-time-panel__btn {
+  color: #fff;
+}
+
+.el-checkbox__inner {
+  background: transparent;
+}
+
+.hide-minute {
+  .el-time-spinner__wrapper {
+    width: 100%;
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+.el-cascader__dropdown {
+  background: #1a202e;
+  border: none;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.48), 0 6px 16px 0 rgba(0, 0, 0, 0.32), 0 9px 28px 8px rgba(0, 0, 0, 0.2);
+  .el-cascader-menu {
+    color: #fff;
+    border-right: 1px solid #2c2c2e;
+  }
+  .el-cascader-node:not(.is-disabled):focus,
+  .el-cascader-node:not(.is-disabled):hover {
+    background: #2c2c2e;
+  }
+}
+
+.el-message-box__wrapper {
+  .el-message-box {
+    background: #1a202e;
+    border: none;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.48), 0 6px 16px 0 rgba(0, 0, 0, 0.32), 0 9px 28px 8px rgba(0, 0, 0, 0.2);
+    .el-message-box__title,
+    .el-message-box__message,
+    .el-message-box__headerbtn .el-message-box__close {
+      color: #fff;
+    }
+  }
+}
+
+.el-cascader-label-tips {
+  z-index: 4000 !important;
+  .ivu-tooltip-inner {
+    max-width: unset;
+  }
+}
+
+.el-cascader-label-content {
+  width: 100%;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  .label-text-content {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .ivu-tooltip {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+  }
+}

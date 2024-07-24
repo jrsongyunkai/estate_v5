@@ -1,0 +1,101 @@
+.content-box {
+  height: calc(~'100vh - 211px');
+  display: flex;
+  .left {
+    width: 250px;
+    margin-right: 10px;
+    padding: 10px;
+    background: #1a202e;
+    border-radius: 5px;
+    height: 100%;
+  }
+  .left.fold {
+    display: none;
+  }
+  .right {
+    width: calc(~'100% - 260px');
+    height: 100%;
+    overflow-y: auto;
+    flex: 1;
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    .search-bar {
+      width: 100%;
+      padding: 15px;
+      background: #1a202e;
+      margin-top: 10px;
+      border-radius: 5px;
+      /deep/.ivu-form {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      /deep/.ivu-form-item {
+        margin-bottom: 0;
+      }
+      .mr-10 {
+        margin-right: 10px;
+      }
+    }
+    .chart-box {
+      margin-top: 10px;
+      background: #1a202e;
+      padding: 15px;
+      border-radius: 5px;
+      .button-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .chart-content {
+        height: 320px;
+        display: flex;
+        width: 100%;
+        .left-box {
+          width: 200px;
+          padding-top: 20px;
+          .left-box-item {
+            width: 100%;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            .item-image {
+              height: 70px;
+              width: 70px;
+              margin-right: 5px;
+            }
+            .item-content {
+              width: calc(~'100% - 75px');
+              .title {
+                font-size: 14px;
+              }
+              .value {
+                font-size: 20px;
+              }
+              .date {
+                font-size: 12px;
+                color: #ddd;
+              }
+            }
+          }
+        }
+        .right-box {
+          width: calc(~'100% - 200px');
+          height: 320px;
+        }
+      }
+    }
+    .ranking-box {
+      display: flex;
+      justify-content: space-between;
+      > div {
+        width: calc(~'50% - 5px');
+      }
+    }
+    /deep/.chart-box-trend {
+      border-radius: 5px;
+    }
+  }
+}

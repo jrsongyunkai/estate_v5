@@ -1,0 +1,231 @@
+body.ivu-theme-dark {
+  background-color: #fff !important;
+  color: #333 !important;
+  font-size: 12px !important;
+}
+
+body {
+  background-color: #fff !important;
+  color: #333 !important;
+  font-size: 12px !important;
+  // 滚动条整体样式
+  ::-webkit-scrollbar {
+    width: 7px; // 高宽分别对应横竖滚动条的尺寸
+    height: 7px;
+  }
+  // 滚动条里面小方块
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: #c1c1c1, #c1c1c1;
+    &:vertical {
+      background: #c1c1c1;
+    }
+    &:horizontal {
+      background: #c1c1c1;
+    }
+  }
+  // 滚动条里面轨道
+  ::-webkit-scrollbar-track {
+    box-shadow: #fff;
+    border-radius: 5px;
+    &:vertical {
+      background: #fff;
+    }
+    &:horizontal {
+      background: #fff;
+    }
+  }
+
+  // 滚动条上下的箭头按钮
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+  ::-webkit-scrollbar-corner {
+    display: none;
+  }
+  @supports not selector(::-webkit-scrollbar) {
+    * {
+      scrollbar-color: #55678f rgba(185, 185, 185, 0.23);
+      scrollbar-width: thin;
+    }
+  }
+
+  .ivu-btn-default {
+    color: #333;
+  }
+  .ivu-select-selection {
+    background-color: transparent;
+    color: #333;
+  }
+  .el-input__inner {
+    border: 1px solid #ddd;
+  }
+  .ivu-select-selection,
+  .ivu-input {
+    border-color: #ddd;
+    font-size: 12px;
+  }
+  .ivu-input {
+    background-color: transparent;
+    color: #333;
+    border-color: #ddd;
+  }
+  .el-input__inner,
+  .el-range-input {
+    background-color: transparent;
+    color: #333;
+    border-color: #ddd;
+  }
+  .el-popper[x-placement^='bottom'] .popper__arrow::after,
+  .el-popper[x-placement^='bottom'] .popper__arrow {
+    border-bottom-color: #fff;
+  }
+  .el-cascader__dropdown .el-cascader-menu {
+    color: #333;
+    background-color: #fff;
+    border-right: #fff;
+  }
+  .el-input__inner,
+  .el-range-input {
+    border: 1px solid #dcdfe6;
+  }
+  .el-input--small .el-input__inner,
+  .el-cascader--small {
+    height: 24px;
+    line-height: 22px;
+  }
+  .el-input--small .el-input__icon {
+    line-height: 24px;
+  }
+  .ivu-table th {
+    background-color: #c6e7ff;
+    border-bottom-color: #ddd;
+    border-right-color: #ddd;
+    color: #333;
+  }
+  .ivu-table,
+  .el-input--small,
+  .ivu-select-small.ivu-select-single .ivu-select-selection .ivu-select-placeholder,
+  .ivu-select-small.ivu-select-single .ivu-select-selection .ivu-select-selected-value,
+  .ivu-input,
+  .ivu-btn-small,
+  .el-cascader .el-input .el-icon-arrow-down,
+  .el-avatar,
+  .el-cascader-panel,
+  .el-radio,
+  .el-radio--medium.is-bordered .el-radio__label,
+  .el-radio__label {
+    font-size: 12px;
+  }
+  .el-cascader-node {
+    line-height: 28px;
+    height: 28px;
+    padding: 0px 0px 0px 10px;
+  }
+  .ivu-select-item {
+    font-size: 12px !important;
+  }
+  .el-cascader__dropdown .el-cascader-node:not(.is-disabled):focus,
+  .el-cascader__dropdown .el-cascader-node:not(.is-disabled):hover {
+    background-color: #c1c1c1;
+  }
+  .money-input .drop {
+    background: #333 !important;
+  }
+  .kind-pick-date .el-input__inner {
+    background-color: #fff !important;
+    border-color: #ddd !important;
+  }
+  .m-date-pop {
+    background: #fff !important;
+  }
+  .el-picker-panel,
+  .el-time-panel {
+    background: #fff !important;
+  }
+  .kind-pick-date .pick-input-box {
+    height: 24px !important;
+  }
+  .el-month-table td:hover div,
+  .el-date-table td.available:hover div {
+    background: #409eff !important;
+    color: #333;
+  }
+  .el-month-table td .cell,
+  .el-month-table td .cell,
+  .el-year-table td .cell {
+    color: #333;
+  }
+  .kind-pick-date .pick-input-box .el-input {
+    height: 24px !important;
+  }
+  .kind-pick-date .pick-input-box {
+    width: 150px !important;
+  }
+  .el-picker-panel__content .el-date-table .el-date-table__row:not(.current) td.available:not(.today) span {
+    color: #333;
+  }
+  .kind-pick-date .ivu-radio-group-button .ivu-radio-wrapper:first-child,
+  .ivu-radio-group-button .ivu-radio-wrapper:first-child {
+    border-left: 1px solid #ddd !important;
+  }
+  .kind-pick-date .ivu-radio-group-button .ivu-radio-wrapper-checked:first-child,
+  .ivu-radio-group-button .ivu-radio-wrapper-checked:first-child {
+    border-left: 1px solid #2d8cf0 !important;
+  }
+  .elp-cascader__dropdown.elp-cascader__dropdown {
+    background: #fff !important;
+    border: none;
+  }
+  .elp-cascader__dropdown.el-popper[x-placement^='bottom'] .popper__arrow::after,
+  .elp-cascader__dropdown.el-popper[x-placement^='bottom'] .popper__arrow {
+    border-bottom-color: #fff;
+  }
+  .elp-cascader-menu {
+    color: #333;
+    border-right: 1px solid #b6b4b4;
+  }
+  .elp-cascader-node:not(.is-disabled):focus,
+  .elp-cascader-node:not(.is-disabled):hover {
+    background: #c1c1c1;
+  }
+  .ivu-tooltip-inner {
+    background: #fff !important;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+  .ivu-tooltip-popper[x-placement^='bottom'] .ivu-tooltip-arrow {
+    border-bottom-color: #fff;
+  }
+
+  span.status {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+  span.status.error {
+    color: #e03c3a;
+    background: rgba(224, 60, 58, 0.2);
+  }
+  span.status.success {
+    color: #70b603;
+    background: rgba(112, 182, 3, 0.2);
+  }
+  span.status.disabled {
+    color: #d7d7d7;
+    background: rgba(215, 215, 215, 0.2);
+  }
+  span.status.warn {
+    color: #f59a23;
+    background: rgba(245, 154, 35, 0.098);
+  }
+  .qrCode-poptip .ivu-poptip-body .content {
+    background: #fff;
+    color: #333;
+    border-top: 1px solid #ddd;
+  }
+  .textError {
+    color: #e03c3a;
+  }
+}

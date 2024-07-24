@@ -1,0 +1,103 @@
+.tree-box {
+  height: 100%;
+  width: 230px;
+  overflow: hidden;
+  .top-menus {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .search-box {
+    width: 100%;
+    .input-box {
+      width: 100%;
+    }
+  }
+  .ivu-menu-light {
+    background: none;
+  }
+  .ivu-menu-horizontal.ivu-menu-light:after {
+    display: none;
+  }
+  .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active,
+  .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu-active,
+  .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item:hover,
+  .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu:hover {
+    border-bottom: none;
+  }
+  .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item,
+  .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu {
+    border-bottom: none;
+  }
+  .ivu-menu-light.ivu-menu-horizontal > .ivu-menu-item,
+  .ivu-menu-light.ivu-menu-horizontal > .ivu-menu-submenu {
+    padding: 0 10px;
+  }
+  .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu /deep/.ivu-menu-submenu-title {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+  }
+  .ivu-menu-horizontal .ivu-menu-submenu /deep/ .ivu-select-dropdown {
+    max-height: 70vh;
+    overflow: auto;
+  }
+  .ivu-menu-horizontal {
+    height: 40px;
+    line-height: 40px;
+    width: calc(~'100% - 20px');
+  }
+  .tree-content {
+    height: calc(~'100% - 95px');
+    overflow: auto;
+    width: 100%;
+    /deep/.vue-recycle-scroller {
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0px;
+      }
+    }
+    /deep/.el-tree {
+      background: none;
+      color: #fff;
+      .custom-tree-node {
+        width: calc(~'100% - 24px');
+      }
+    }
+    /deep/.el-tree-node,
+    /deep/.el-tree-node:hover {
+      background: none;
+    }
+    /deep/.el-tree-node:focus > .el-tree-node__content,
+    /deep/.el-tree--highlight-current .el-tree-node.is-current > .el-tree-node__content,
+    /deep/.el-tree-node__content:hover {
+      background: none;
+      color: #2d8cf0;
+    }
+    /deep/.is-focusable {
+      background: none;
+    }
+    /deep/.ivu-tree ul li {
+      margin: 2px 0;
+      line-height: 30px;
+    }
+    /deep/.ivu-tree .ivu-tree-empty {
+      text-align: center;
+    }
+    /deep/ .ivu-tree-title-selected,
+    /deep/ .ivu-tree-title-selected:hover {
+      background-color: #2d8cf0;
+    }
+  }
+  /deep/.el-loading-mask {
+    z-index: 10 !important;
+    background-color: #1a202e;
+  }
+}
+.tree-box.fold {
+  width: 0px;
+  overflow: hidden;
+}

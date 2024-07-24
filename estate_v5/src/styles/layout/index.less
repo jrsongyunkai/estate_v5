@@ -1,0 +1,96 @@
+@import 'basic-layout/layout.less';
+@import 'basic-layout/menu.less';
+
+.feedback {
+  .ivu-modal-footer {
+    padding: 0 !important;
+  }
+}
+#alarmSocket2 {
+  .ivu-modal {
+    border: none;
+    position: relative;
+    .alarmBtn {
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      margin-left: -66px;
+      background: url('../../assets/images/alarmBtn.png') no-repeat;
+      background-size: 100% 100%;
+      width: 133px;
+      height: 38px;
+      cursor: pointer;
+    }
+    .alarmBtnE {
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      margin-left: -66px;
+      background: url('../../assets/images/alarmBtnE.png') no-repeat;
+      background-size: 100% 100%;
+      width: 133px;
+      height: 38px;
+      cursor: pointer;
+    }
+    .abnormal {
+      position: absolute;
+      top: 50px;
+      padding: 0 20px;
+    }
+  }
+  .ivu-modal-content {
+    background: url('../../assets/images/alarm_beg2.png') no-repeat;
+    background-size: 100% 100%;
+    height: 430px;
+    border: none;
+    color: #fff;
+    box-shadow: none;
+  }
+  .ivu-modal-contentE {
+    background: url('../../assets/images/alarm_beg2E.png') no-repeat;
+    background-size: 100% 100%;
+    height: 430px;
+    border: none;
+    color: #fff;
+    box-shadow: none;
+  }
+  .ivu-modal-header {
+    border: none;
+    background-color: transparent;
+  }
+  .ivu-modal-body {
+    padding: 0;
+    height: 328px;
+    margin-top: 34px;
+    background-color: transparent;
+    overflow: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .d-alm-content {
+    padding: 8px 8px;
+    .d-alm {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 10px;
+      font-size: 14px;
+      span {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .handle-alarm {
+    font-size: 16px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .ivu-modal-footer {
+    border: none;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "active": "dev",
+  "dev": "http://dev-v5.sndtest.com/",
+  "devb": "http://devb-v5.sndtest.com/",
+  "test": "http://v5.sndtest.com/"
+}

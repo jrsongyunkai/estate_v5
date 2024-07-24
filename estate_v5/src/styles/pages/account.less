@@ -1,0 +1,158 @@
+.page-account {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  background-color: transparent;
+
+  &-container {
+    flex: 1;
+    padding: 32px 0;
+    text-align: center;
+    width: 384px;
+    margin: 0 auto;
+    &-result {
+      width: 100%;
+    }
+    @media screen and (max-width: @screen-sm) {
+      width: 95%;
+    }
+  }
+
+  &-tabs {
+    .ivu-tabs-bar {
+      border-bottom: none;
+    }
+    .ivu-tabs-nav-scroll {
+      text-align: center;
+    }
+    .ivu-tabs-nav {
+      display: inline-block;
+      float: none;
+    }
+  }
+
+  &-top {
+    padding: 32px 0;
+
+    &-logo {
+      img {
+        height: 75px;
+      }
+    }
+
+    &-desc {
+      font-size: @font-size-base;
+      color: @subsidiary-color;
+    }
+  }
+
+  &-auto-login {
+    margin-bottom: 24px;
+    text-align: left;
+
+    a {
+      float: right;
+    }
+  }
+
+  &-other {
+    margin: 24px 0;
+    text-align: left;
+
+    span {
+      font-size: @font-size-base;
+    }
+
+    img {
+      width: 24px;
+      margin-left: 16px;
+      cursor: pointer;
+      vertical-align: middle;
+      opacity: 0.7;
+      transition: all @transition-time @ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .ivu-poptip,
+  .ivu-poptip-rel {
+    display: block;
+  }
+
+  &-register {
+    float: right;
+
+    &-tip {
+      text-align: left;
+
+      &-low {
+        color: @error-color;
+      }
+
+      &-medium {
+        color: @warning-color;
+      }
+
+      &-strong {
+        color: @success-color;
+      }
+
+      &-title {
+        font-size: @font-size-base;
+      }
+
+      &-desc {
+        white-space: initial;
+        font-size: @font-size-base;
+        margin-top: 6px;
+      }
+    }
+  }
+
+  &-to-login {
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  &-header {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    line-height: 70px;
+    .project {
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 24px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        margin-left: 24px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .ivu-login {
+    background-color: #fff;
+  }
+  .page-account-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .ivu-input {
+    background-color: #fff;
+    border-color: #dcdfe6;
+    &::-webkit-input-placeholder {
+      color: #dcdfe6;
+    }
+    &::placeholder {
+      color: #dcdfe6 !important;
+      opacity: 1 !important; //火狐有个默认的0.4的透明度
+    }
+  }
+}

@@ -1,0 +1,267 @@
+#app,
+body,
+html {
+  height: 100%;
+}
+body {
+  background-color: @background-color-base;
+  font-size: 14px;
+}
+
+// 滚动条整体样式
+::-webkit-scrollbar {
+  width: 7px; // 高宽分别对应横竖滚动条的尺寸
+  height: 7px;
+}
+// 滚动条里面小方块
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset -1px 2px 3px rgba(0, 0, 0, 0.102), 0px 0px 5px rgba(0, 0, 0, 0.431);
+  &:vertical {
+    background: linear-gradient(90deg, #55678f, #343c4c);
+  }
+  &:horizontal {
+    background: linear-gradient(-180deg, #55678f, #343c4c);
+  }
+}
+// 滚动条里面轨道
+::-webkit-scrollbar-track {
+  box-shadow: inset 1px 2px 3px rgba(255, 255, 255, 0.22);
+  border-radius: 5px;
+  &:vertical {
+    background: linear-gradient(90deg, rgba(164, 164, 164, 0.07), rgba(185, 185, 185, 0.23));
+  }
+  &:horizontal {
+    background: linear-gradient(-180deg, rgba(164, 164, 164, 0.07), rgba(185, 185, 185, 0.23));
+  }
+}
+
+// 滚动条上下的箭头按钮
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: #55678f rgba(185, 185, 185, 0.23);
+    scrollbar-width: thin;
+  }
+}
+.anchorBL {
+  display: none;
+}
+// 隐藏滚动条样式
+.i-scrollbar-hide {
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #e8eaec;
+  }
+}
+
+// 极简滚动条样式
+.i-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #808695;
+    border-radius: 4px;
+  }
+}
+.ivu-theme-dark .ivu-list-item-action > li,
+.ivu-theme-dark .ivu-list-item-meta-description {
+  color: #999;
+}
+// 去除 Table 的左右边框，更精简
+.i-table-no-border {
+  .ivu-table th {
+    background-color: #fff;
+  }
+  .ivu-table-wrapper,
+  .ivu-table tr:last-child td {
+    border: none;
+  }
+  .ivu-table:before,
+  .ivu-table:after {
+    display: none;
+  }
+}
+
+.tc {
+  text-align: center;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mr-10 {
+  margin-left: 10px;
+}
+.dateBnt button {
+  /* width: 30px; */
+  height: 30px;
+  /* border-radius: 50%; */
+  line-height: 30px;
+  border: none;
+  color: #fff;
+  padding: 0 8px;
+}
+.ivu-tree-children {
+  overflow: hidden;
+}
+
+.ivu-tree-arrow-open {
+  position: relative;
+}
+.ivu-radio-group-button .ivu-radio-wrapper:first-child {
+  border-radius: 4px 0 0 4px;
+  border-left: 1px solid #3d3d41;
+}
+.ivu-tree-arrow-open::after {
+  position: absolute;
+  top: 20px;
+  left: 6px;
+  z-index: 9999;
+  width: 1px;
+  height: 2000px;
+  background-color: #666666;
+  content: '';
+}
+.ivu-table-fixed {
+  margin-bottom: 10px !important;
+  height: auto !important;
+}
+.ivu-table-fixed-right {
+  margin-bottom: 10px !important;
+  height: auto !important;
+}
+// 修复表格带合计的横向滚动条被固定列遮挡，固定列不可点击
+.fix-summary-scroll {
+  .ivu-table-fixed,
+  .ivu-table-fixed-right {
+    pointer-events: none;
+  }
+}
+//文字滚动使用动画
+@keyframes roll-text {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.fix-tooltip-max-width {
+  .ivu-tooltip-inner {
+    max-width: none;
+  }
+}
+
+.ivu-btn-text:focus {
+  box-shadow: none;
+}
+
+.ivu-table-fixed-right-header {
+  background-color: #28313e !important;
+  border-bottom: none !important;
+}
+
+.vxe-table .vxe-table--header-wrapper {
+  color: #fff;
+}
+.vxe-table--render-default {
+  color: #fff;
+}
+.vxe-table--render-default.border--full .vxe-body--column,
+.vxe-table--render-default.border--full .vxe-footer--column,
+.vxe-table--render-default.border--full .vxe-header--column {
+  background-image: none;
+  border-right: 1px solid #3d3d41;
+  border-bottom: 1px solid #3d3d41;
+}
+.vxe-table--render-default.border--full .vxe-body--column {
+  background: #1a202e;
+}
+.vxe-table--render-default.border--default .vxe-table--header-wrapper,
+.vxe-table--render-default.border--full .vxe-table--header-wrapper,
+.vxe-table--render-default.border--outer .vxe-table--header-wrapper {
+  background: #28313f;
+}
+.vxe-table--render-default.border--full .vxe-table--fixed-left-wrapper .vxe-body--column {
+  border-right-color: #3d3d41;
+  border-right: 1px solid #3d3d41;
+  border-bottom: 1px solid #3d3d41;
+}
+.vxe-table--render-default .vxe-table--body-wrapper table,
+.vxe-table--render-default .vxe-table--footer-wrapper table {
+  background: #28313f;
+}
+.vxe-table--render-default .vxe-table--border-line {
+  border: 1px solid #3d3d41;
+}
+.vxe-table .vxe-table--header-wrapper .vxe-table--header-border-line {
+  border-bottom: 1px solid #3d3d41;
+}
+.vxe-table--render-default .vxe-table--empty-content {
+  pointer-events: none;
+}
+.vxe-table--render-default .vxe-table--fixed-left-wrapper.scrolling--middle {
+  box-shadow: 8px 0px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.vxe-table--render-default .vxe-table--fixed-right-wrapper.scrolling--middle {
+  box-shadow: -8px 0px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.vxe-table--render-default .vxe-table--footer-wrapper {
+  color: #fff;
+  border-top-color: #3d3d41;
+}
+.vxe-table--render-default.border--full .vxe-table--header-wrapper .vxe-header--row:last-child .vxe-header--gutter {
+  background: none;
+}
+
+.ivu-btn-text {
+  &.text-btn-primary {
+    color: #007eff;
+    &:hover {
+      color: #2d8cf0;
+    }
+  }
+  &.text-btn-error {
+    color: #ed4014;
+    &:hover {
+      color: #f16643;
+    }
+  }
+}
+
+.gm-style .gm-style-cc button {
+  display: none !important;
+}
+
+.gm-style-cc {
+  display: none !important;
+}
+
+a[rel='noopener'] {
+  display: none !important;
+}

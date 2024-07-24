@@ -1,0 +1,132 @@
+const pre = '/multiManage/'
+
+export default {
+  path: '/multiManage',
+  title: '$t:multiManage',
+  header: 'home',
+  custom: 'icon-v5 icon-v5-zongheguankong',
+  children: [
+    {
+      path: `${pre}threShold`,
+      title: '$t:smartThresholdConfig',
+      custom: 'icon-v5 icon-v5-yuzhizhinengpeizhi',
+      cache: true,
+      isVisibleValue: 0,
+    },
+    {
+      path: `${pre}stealingElectricity`,
+      title: '$t:electricityTheftMonitoringConfiguration',
+      custom: 'icon-v5 icon-v5-qiedian',
+      cache: true,
+      isVisibleValue: 1,
+    },
+    {
+      path: `${pre}sceneControl`,
+      title: '$t:sceneControl',
+      custom: 'icon-v5 icon-v5-changjingkongzhi',
+      isVisibleValue: 2,
+    },
+    {
+      path: `${pre}builtInTimer`,
+      title: '$t:builtInTimingConfiguration',
+      custom: 'icon-v5 icon-v5-dingshipeizhi1',
+      isVisibleValue: 3,
+    },
+    {
+      path: `${pre}latlongTimer`,
+      title: '$t:lnglatTimerConfig',
+      custom: 'icon-v5 icon-v5-jingweidingshi1',
+      isVisibleValue: 4,
+    },
+    {
+      path: `${pre}batchConfig`,
+      title: '$t:batchConfig',
+      custom: 'icon-v5 icon-v5-piliangpeizhi1',
+      isVisibleValue: 5,
+    },
+    {
+      path: `${pre}contrlTasks`,
+      title: '$t:contrlTaskList',
+      custom: 'icon-v5 icon-v5-kongzhiqingdan',
+      isVisibleValue: 6,
+    },
+    {
+      path: `${pre}groupConfig`,
+      title: '$t:groupManage',
+      custom: 'icon-v5 icon-v5-fenzukongzhi',
+      isVisibleValue: 7,
+    },
+    {
+      path: `${pre}loadManagement`,
+      title: '$t:loadManage',
+      custom: 'icon-v5 icon-v5-fuzaiguanli',
+      isVisibleValue: 8,
+    },
+    {
+      path: `${pre}assetManagement`,
+      title: '资产管理',
+      custom: 'icon-v5 icon-v5-fenzukongzhi',
+      isVisibleValue: 20,
+    },
+    {
+      path: `${pre}deviceListControl`,
+      title: '$t:deviceListControl',
+      custom: 'icon-v5 icon-v5-shebeiliebiaoyukongzhi1',
+      isVisibleValue: 9,
+    },
+    {
+      path: `${pre}dayExecuteList`,
+      title: '$t:dailyExecutionList',
+      custom: 'icon-v5 icon-v5-shezhi1',
+      isVisibleValue: 10,
+    },
+    {
+      path: `${pre}abnormalStateConfig`,
+      title: '$t:abnormalStateConfig',
+      custom: 'icon-v5 icon-v5-yichangzhuangtaijiancepeizhi1',
+      isVisibleValue: 11,
+    },
+    {
+      path: `${pre}runningTense`,
+      title: '$t:runtimeTense',
+      custom: 'icon-v5 icon-v5-yunhangshitai',
+      isVisibleValue: 12,
+    },
+    {
+      path: `${pre}linkageScene`,
+      title: '$t:linkageConfig',
+      custom: 'icon-v5 icon-v5-liandongkongzhi',
+      isVisibleValue: 13,
+    },
+    {
+      path: `${pre}workOrder`,
+      title: '$t:workOrderManagement',
+      custom: 'icon-v5 icon-v5-gongdanguanli1',
+      isVisibleValue: 14,
+    },
+    {
+      path: `${pre}trafficRenewal`,
+      title: '$t:SIMCardManagement',
+      custom: 'icon-v5  icon-v5-liuliangxufei',
+      isVisibleValue: 15,
+    },
+    {
+      path: `${pre}nurseList`,
+      title: '$t:electricityCare',
+      custom: 'icon-v5 icon-v5-aixinjiance',
+      isVisibleValue: 16,
+    },
+    {
+      path: `${pre}report`,
+      title: '$t:statisticalReport',
+      custom: 'icon-v5 icon-v5-tongjibaogao',
+      isVisibleValue: 17,
+    },
+    {
+      path: `${pre}diagram`,
+      title: '$t:runtimeSystemDiagram',
+      custom: 'icon-v5 icon-v5-yunhangshixitongtu',
+      isVisibleValue: 19,
+    },
+  ],
+}
